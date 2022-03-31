@@ -1,0 +1,17 @@
+<p>
+  Start editing to see some magic happen :)
+</p>
+<div *ngFor= "let emp of employee " id='card' >
+  <div class="cardObj" >
+    <label style="padding-right: 60px;" for="id">ID:</label>
+    <input type="text" value={{emp.id}} (change) = "update()">
+  </div>
+  <div class="cardObj">
+    <label style="padding-right: 5px;" for="fname"> First Name:</label>
+    <input type="text" value={{emp.fname}} (change) = "update()">
+  </div>
+  <div class="cardObj" >
+    <label style="padding-right: 6px;" for="lname">Last Name:</label>
+    <input type="text" value={{emp.lname}} (change) = "update()">
+  </div>
+</div>

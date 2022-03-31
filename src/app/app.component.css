@@ -1,0 +1,15 @@
+p {
+  font-family: Lato;
+}
+
+#card {
+  border-style: solid;
+  padding: 5px;
+  width: 300px;
+  margin: 10px;
+  position: relative ;
+}
+
+.cardObj{
+  padding: 5px;;
+}
