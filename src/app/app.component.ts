@@ -14,8 +14,7 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.update();
-
+    
     fetch(this.url)
     .then(response => response.json())
     .then(json => {
@@ -23,7 +22,18 @@ export class AppComponent implements OnInit {
       console.log(this.employee.map(t => t['id'])); 
       });
   }
-  update(){
 
+  update(e){
+      console.log(e)
+      this.http.put(this.url + '/user', e)
+      .subscribe();
+  }
+
+  delete(e){
+    console.log(e);
+    console.log(this.employee.splice(e,1));
+    console.log(this.employee);
+    this.http.delete(this.url + '/user'+ e.id)
+        .subscribe();
   }
 }
